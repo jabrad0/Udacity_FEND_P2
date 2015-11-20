@@ -73,6 +73,7 @@ p {
   line-height: 21px;
 }
 
+
 a {
   color: #1199C3;
   text-decoration: none;
@@ -80,11 +81,33 @@ a {
   display: block;
 }
 
+#topContacts a {
+  color: #F3F3F3;
+  display: inline;
+}
+
+#topContacts a:hover {
+  color: #1199C3;
+}
+
+#footerContacts a {
+  color: #F3F3F3;
+  display: inline;
+}
+
+#footerContacts a:hover {
+  color: #1199C3;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
+}
+
+#skills {
+  /*display: block;*/
 }
 
 #skillsH3 {
@@ -101,7 +124,7 @@ a {
 }
 
 .white-text {
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: #FFFFFF;
 }
 

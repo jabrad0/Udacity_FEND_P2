@@ -2,12 +2,26 @@ var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr/>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLlinkedin= '<li class="flex-item"><span class="orange-text">linkedin</span><span class="white-text">%data%</span></li>';
+var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">linkedin</span>';
+var HTMLlinkedinURL = '<span class="white-text"><a href="#" target="_blank">%data%</a></span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span>';
+var HTMLtwitterURL = '<span class="white-text"><a href="#" target="_blank">%data%</a></span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span>';
+var HTMLgithubURL = '<span class="white-text"><a href="#" target="_blank">%data%</a></span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span>';
+var HTMLlocationURL = '<span class="white-text"><a href="#" target="_blank">%data%</a></span></li>';
+
+// var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+
+
+
+
+
+
+
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLWelcomeMsg = '<span class="welcome-message">%data%</span>';

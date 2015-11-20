@@ -4,14 +4,18 @@ var bio = {
   "contacts": {
     "email": "julibrady@gmail.com",
     "github": "jabrad0",
+    "githubURL": "https://github.com/jabrad0",
     "twitter": "@Juli_Brady",
+    "twitterURL": "https://twitter.com/juli_brady",
     "linkedin": "julibrady",
-    "location": "Nashville, TN"
+    "linkedinURL": "https://www.linkedin.com/in/julibrady",
+    "location": "Nashville, TN",
+    "locationURL": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"
   },
   "location": "Nashville, TN",
   "bioPic": "images/300x300.jpg",
   "welcome_message": "I'm Juli Brady",
-  "skills": [" Python", " Javascript", " HTML5", " CSS", 'Flask', 'Jquery']
+  "skills": [" Python", " Javascript", " HTML5", " CSS", 'Flask', 'Jquery', "AJAX", "SQL"]
 }
 var education = {
   "schools": [
@@ -146,22 +150,38 @@ bio.display = function() {
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
 
+  //Refactor (so not repeating) BEGIN:
   // Contact Info
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   $("#topContacts").append(formattedEmail);
   $("#footerContacts").append(formattedEmail);
-  var formattedLinkedIn = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
-  $("#topContacts").append(formattedLinkedIn);
-  $("#footerContacts").append(formattedLinkedIn);
-  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-  $("#topContacts").append(formattedGithub);
-  $("#footerContacts").append(formattedGithub);
-  var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-  $("#topContacts").append(formattedTwitter);
-  $("#footerContacts").append(formattedTwitter);
-  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-  $("#topContacts").append(formattedLocation);
-  // $("#topContacts").append(formattedLocation);
+
+  var formattedlinkedin = HTMLlinkedin;
+  var formattedlinkedinURL = HTMLlinkedinURL.replace("%data%", bio.contacts.linkedin);
+  formattedlinkedinURL = formattedlinkedinURL.replace("#", bio.contacts.linkedinURL);
+  var formattedlinkedinlinkedinURL = formattedlinkedin + formattedlinkedinURL;
+  $("#topContacts").append(formattedlinkedinlinkedinURL);
+  $("#footerContacts").append(formattedlinkedinlinkedinURL);
+
+  var formattedtwitter = HTMLtwitter;
+  var formattedtwitterURL = HTMLtwitterURL.replace("%data%", bio.contacts.twitter);
+  formattedtwitterURL = formattedtwitterURL.replace("#", bio.contacts.twitterURL);
+  var formattedtwittertwitterURL = formattedtwitter + formattedtwitterURL;
+  $("#topContacts").append(formattedtwittertwitterURL);
+  $("#footerContacts").append(formattedtwittertwitterURL);
+
+  var formattedgithub = HTMLgithub;
+  var formattedgithubURL = HTMLgithubURL.replace("%data%", bio.contacts.github);
+  formattedgithubURL = formattedgithubURL.replace("#", bio.contacts.githubURL);
+  var formattedgithubgithubURL = formattedgithub + formattedgithubURL;
+  $("#topContacts").append(formattedgithubgithubURL);
+  $("#footerContacts").append(formattedgithubgithubURL);
+  //Refactor END
+  var formattedlocation = HTMLlocation;
+  var formattedlocationURL = HTMLlocationURL.replace("%data%", bio.contacts.location);
+  formattedlocationURL = formattedlocationURL.replace("#", bio.contacts.locationURL);
+  var formattedlocationlocationURL = formattedlocation + formattedlocationURL;
+  $("#topContacts").append(formattedlocationlocationURL);
 
   //bioPic
   var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
