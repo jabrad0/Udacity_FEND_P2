@@ -4,8 +4,8 @@ var bio = {
   "contacts": {
     "email": "julibrady@gmail.com",
     "github": "jabrad0",
-    "twitter": "@jabrad0",
-    "linkedin": "Juli",
+    "twitter": "@Juli_Brady",
+    "linkedin": "julibrady",
     "location": "Nashville, TN"
   },
   "location": "Nashville, TN",
@@ -28,7 +28,7 @@ var education = {
       "location": "Davis, California",
       "degree": "MS",
       "major": "Biological and Agricultural Engineering",
-      "dates": "2001-2013 ",
+      "dates": "2001-2003 ",
       "url":"http://bae.engineering.ucdavis.edu/"
     },
     {
@@ -37,20 +37,20 @@ var education = {
       "degree": "BS",
       "major": "Biological and Agricultural Engineering",
       "dates": "1995-2000 ",
-      "url":"www.uky.edu/bae/"
+      "url":"http://www.uky.edu/bae/"
     }
   ],
   "onlineCourses": [
     {
-      "title": "CS90",
-      "school": "Coursera",
-      "dates": "Spring 2014",
-      "url": "www.xyx"
+      "title": "Front-End Nanodegree",
+      "school": "Udacity",
+      "dates": "Fall 2015",
+      "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     },
     {
-      "title": "Learn Python the Hard Way",
-      "school": "xyz",
-      "dates": "Summer 2014",
+      "title": "Python Stuff - List out",
+      "school": "Treehouse",
+      "dates": "2015",
       "url": "www.xyx"
     },
     {
@@ -60,15 +60,15 @@ var education = {
       "url": "www.xyx"
     },
     {
-      "title": "Python Stuff",
-      "school": "Treehouse",
-      "dates": "2015",
+      "title": "Learn Python the Hard Way",
+      "school": "xyz",
+      "dates": "Summer 2014",
       "url": "www.xyx"
     },
     {
-      "title": "Udacity Nanodegree",
-      "school": "Udacity",
-      "dates": "Fall 2015",
+      "title": "CS90",
+      "school": "Coursera",
+      "dates": "Spring 2014",
       "url": "www.xyx"
     }
   ]
@@ -77,24 +77,11 @@ var education = {
 var work = {
   "jobs": [
     {
-      "employer": "USDA",
-      "title": "Staff Engineer",
-      "location": "Moscow, Idaho",
-      "dates": "2000",
-      "description": "Slow-carb hashtag selfies, kitsch kinfolk retro DIY fanny pack raw denim swag meggings shoreditch tattooed gluten-free four loko. Pickled direct trade narwhal, hella mixtape knausgaard plaid biodiesel distillery."
-    },
-    {
-      "employer": "Kennedy-Jenks Consultants",
-      "title": "Staff Engineer",
-      "location": "Sacramento, California",
-      "dates": "2003-2006",
-      "description": "Letterpress before they sold out knausgaard, XOXO banh mi ramps readymade. Ugh food truck etsy poutine, sriracha asymmetrical tote bag next level truffaut helvetica."
-    },
-    {
       "employer": "Streamborn",
       "title": "Senior Engineer",
       "location": "Berkeley, California",
       "dates": "2006-2010, 2013-2015",
+      "url": "https://www.linkedin.com/in/streamborn",
       "description": "Slow-carb hashtag selfies, kitsch kinfolk retro DIY fanny pack raw denim swag meggings shoreditch tattooed gluten-free four loko. Pickled direct trade narwhal, hella mixtape knausgaard plaid biodiesel distillery."
     },
     {
@@ -102,7 +89,24 @@ var work = {
       "title": "Engineer",
       "location": "Oakland, California",
       "dates": "2010-2013",
+      "url": "http://www.irisenv.com/",
       "description": "Vice green juice direct trade everyday carry banjo put a bird on it, ethical vinyl microdosing roof party. Paleo chambray slow-carb pitchfork. "
+    },
+    {
+      "employer": "Kennedy-Jenks Consultants",
+      "title": "Staff Engineer",
+      "location": "Sacramento, California",
+      "dates": "2003-2006",
+      "url": "http://www.kennedyjenks.com/",
+      "description": "Letterpress before they sold out knausgaard, XOXO banh mi ramps readymade. Ugh food truck etsy poutine, sriracha asymmetrical tote bag next level truffaut helvetica."
+    },
+    {
+      "employer": "USDA",
+      "title": "Staff Engineer",
+      "location": "Moscow, Idaho",
+      "dates": "2000",
+      "url": "http://www.fsa.usda.gov/",
+      "description": "Slow-carb hashtag selfies, kitsch kinfolk retro DIY fanny pack raw denim swag meggings shoreditch tattooed gluten-free four loko. Pickled direct trade narwhal, hella mixtape knausgaard plaid biodiesel distillery."
     }
 
   ]
@@ -111,21 +115,24 @@ var work = {
 var projects = {
   "projects": [
     {
+      "title":"Udacity FrontEnd Nanodegree",
+      "url":"url here",
+      "dates":"Fall 2015",
+      "description": "Skateboard YOLO austin hoodie, squid cred hammock schlitz craft beer asymmetrical green juice. Ethical PBR&B you probably haven't heard of them blue bottle lo-fi bespoke, stumptown schlitz. Ugh try-hard occupy hoodie meh, beard brooklyn tofu. Fap iPhone blue bottle bitters fixie crucifix. Cold-pressed shabby chic venmo, schlitz cronut bitters slow-carb vinyl cliche aesthetic gluten-free. Listicle humblebrag fashion axe actually.",
+      "images": ["images/197x148.gif", "images/197x148.gif"]
+    },
+    {
       "title":"Getgo",
+      "url":"https://getartandgo.herokuapp.com/",
       "dates":"Fall 2014",
       "description": "Kinfolk cray raw denim lumbersexual, waistcoat pork belly tacos wolf shabby chic. Microdosing thundercats roof party, tattooed dreamcatcher migas actually hoodie ennui mixtape umami twee tofu kogi 3 wolf moon. Trust fund 8-bit pitchfork, hammock cold-pressed keffiyeh crucifix aesthetic migas.",
       "images": ["images/197x148.gif", "images/197x148.gif"]
     },
     {
-      "title":"Corky St.Clair",
+      "title":"Spiritual Corky",
+      "url":"https://twitter.com/spiritual_corky",
       "dates":"Winter 2015",
       "description": "Hashtag tofu yuccie shabby chic, leggings 90's meh flexitarian sriracha ramps green juice forage migas chillwave. Cornhole actually chicharrones, lomo fap pitchfork single-origin coffee chambray shabby chic post-ironic messenger bag four dollar toast irony viral. Polaroid pork belly marfa, chia salvia cred mlkshk pour-over irony butcher twee forage 8-bit wolf. ",
-      "images": ["images/197x148.gif", "images/197x148.gif"]
-    },
-    {
-      "title":"title here",
-      "dates":"date here",
-      "description": "Skateboard YOLO austin hoodie, squid cred hammock schlitz craft beer asymmetrical green juice. Ethical PBR&B you probably haven't heard of them blue bottle lo-fi bespoke, stumptown schlitz. Ugh try-hard occupy hoodie meh, beard brooklyn tofu. Fap iPhone blue bottle bitters fixie crucifix. Cold-pressed shabby chic venmo, schlitz cronut bitters slow-carb vinyl cliche aesthetic gluten-free. Listicle humblebrag fashion axe actually.",
       "images": ["images/197x148.gif", "images/197x148.gif"]
     }
   ]
@@ -142,14 +149,19 @@ bio.display = function() {
   // Contact Info
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   $("#topContacts").append(formattedEmail);
+  $("#footerContacts").append(formattedEmail);
   var formattedLinkedIn = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
   $("#topContacts").append(formattedLinkedIn);
+  $("#footerContacts").append(formattedLinkedIn);
   var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
   $("#topContacts").append(formattedGithub);
+  $("#footerContacts").append(formattedGithub);
   var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
   $("#topContacts").append(formattedTwitter);
+  $("#footerContacts").append(formattedTwitter);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
   $("#topContacts").append(formattedLocation);
+  // $("#topContacts").append(formattedLocation);
 
   //bioPic
   var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
@@ -172,6 +184,7 @@ work.display = function() {
     $("#workExperience").append(HTMLworkStart);
 
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    formattedEmployer = formattedEmployer.replace("#", work.jobs[job].url);
     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
     $(".work-entry:last").append(formattedEmployerTitle);
@@ -193,7 +206,11 @@ projects.display = function() {
     $("#projects").append(HTMLprojectStart);
 
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-    $(".project-entry:last").append(formattedTitle);
+    formattedTitle = formattedTitle.replace("#", projects.projects[project].url);
+    var formattedURL = HTMLprojectURL.replace("%data%", projects.projects[project].url);
+    var formattedTitleURL = formattedTitle + formattedURL;
+    $(".project-entry:last").append(formattedTitleURL);
+
     var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
     $(".project-entry:last").append(formattedDates);
     var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
@@ -213,11 +230,10 @@ education.displaySchools = function() {
   for (school in education.schools) {
     $("#education").append(HTMLschoolStart);
     var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+    formattedName = formattedName.replace("#", education.schools[school].url );
     var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
     var formattedNameDegree = formattedName + formattedDegree;
     $(".education-entry:last").append(formattedNameDegree);
-
-
     var formattedDates= HTMLschoolDates.replace("%data%", education.schools[school].dates);
     $(".education-entry:last").append(formattedDates);
     var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
@@ -232,6 +248,7 @@ education.displayOnline = function() {
   for (onlineCourse in education.onlineCourses) {
   $("#education").append(HTMLschoolStart);
   var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
+  formattedTitle = formattedTitle.replace("#", education.onlineCourses[onlineCourse].url);
   var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
   var formattedTitleSchool = formattedTitle + formattedSchool;
   $(".education-entry:last").append(formattedTitleSchool);
@@ -250,7 +267,7 @@ education.displayOnline();
 
 
 //Google Map
-$("#mapDiv:last").append(googleMap);
+$("#mapDiv").append(googleMap);
 
 
 
