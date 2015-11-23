@@ -89,6 +89,10 @@ a {
 #topContacts a:hover {
   color: #1199C3;
 }
+/*add this for max on for responsivness*/
+/*#topContacts .white-text {
+  padding: 0;
+}*/
 
 #footerContacts a {
   color: #F3F3F3;
