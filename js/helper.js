@@ -64,6 +64,7 @@ The International Name challenge in Lesson 2 where you'll create a function that
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
+
 clickLocations = [];
 
 function logClicks(x,y) {
@@ -95,22 +96,21 @@ function initializeMap() {
   var mapOptions = {
     disableDefaultUI: false,
     mapTypeId: google.maps.MapTypeId.TERRAIN,
-    heading: 45
+
   };
 
   //***create InfoWindow in main initializeMap() function
-  //then inside createMapMarker create click event on marker
+  //then inside createMapMarker() create click event on marker
   //to open infoWindow -this allows for the infowindows to close when you
   //click on another one - I have no idea why this works right now.***
   var infoWindow = new google.maps.InfoWindow({
-    // content: applied in clickevent in createMapMarker()
+    content: 'initial info window content'// final content is in createMapMarker()
   });
 
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
   /*
-  locationFinder() returns an array of every location string from the JSONs
-  written for bio, education, and work.
+  locationFinder() returns an array of every location string from the JSONs written for bio, education, and work.
   */
   function locationFinder() {
     var locations = [];
@@ -122,6 +122,7 @@ function initializeMap() {
       locations.push(work.jobs[job].location);
     }
     return locations;
+
   }
 
   /*
@@ -130,20 +131,49 @@ function initializeMap() {
   about a single location.
   */
   function createMapMarker(placeData) {
+    var placeId = placeData.place_id;
     var lat = placeData.geometry.location.lat();  // latitude from the place service
     var lon = placeData.geometry.location.lng();  // longitude from the place service
-    var name = placeData.formatted_address;   // name of the place from the place service
+    var city = placeData.formatted_address;   // name of the place from the place service
     var bounds = window.mapBounds;            // current boundaries of the map window
+    var place;
+    var date;
 
+    if (placeId === bio.place_id) {
+     place = "Current Home";
+     date = bio.dates;
+    }
+    for (school in education.schools) {
+      if (placeId === education.schools[school].place_id) {
+        place = education.schools[school].name;
+        date = education.schools[school].dates;
+      }
+    }
+    for (job in work.jobs) {
+      if (placeId === work.jobs[job].place_id) {
+        place = work.jobs[job].employer;
+        date = work.jobs[job].dates;
+      }
+    }
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
       map: map, //specifies on which map to place marker
-      position: placeData.geometry.location,
-      title: name
+      position: placeData.geometry.location, //placedata is an object with additional data about the place
+      title: place + " " + city, //title = what appears when hover over marker
+      animation: google.maps.Animation.DROP
     });
 
     google.maps.event.addListener(marker, 'click', function() {
-      infoWindow.setContent(name);
+      var content = $('<div id="iw_container"></div>');
+      var header = $('<div class="iw_title"><div>');
+      header.text(place + " — " + date);
+      var city_div = $('<div class="iw_city"><div>');
+      city_div.text(city)
+      var url = $('<div><a href="' + "https://www.google.com" + '">Exciting Photo</a></div>');
+      content.append(header);
+      content.append(city_div);
+      content.append(url);
+      infoWindow.setContent(content.html());
       infoWindow.open(map, this); //'this' or 'marker' places pin at proper anchor
     });
 

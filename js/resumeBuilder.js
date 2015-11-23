@@ -10,9 +10,12 @@ var bio = {
     "linkedin": "julibrady",
     "linkedinURL": "https://www.linkedin.com/in/julibrady",
     "location": "Nashville, TN",
+    "place_id": "ChIJPZDrEzLsZIgRoNrpodC5P30",
     "locationURL": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"
   },
   "location": "Nashville, TN",
+  "dates": "Fall 2015",
+  "place_id": "ChIJPZDrEzLsZIgRoNrpodC5P30",
   "bioPic": "images/300x300.jpg",
   "welcome_message": "I'm Juli Brady",
   "skills": [" Python", " Javascript", " HTML5", " CSS", 'Flask', 'Jquery', "AJAX", "SQL"]
@@ -22,6 +25,7 @@ var education = {
     {
       "name": "Hackbright Academy",
       "location": "San Francisco, California",
+      "place_id": "ChIJIQBpAG2ahYAR_6128GcTUEo",
       "degree": "Technical Training in Full Stack Web Development",
       "major": "not applicable",
       "dates": "Fall 2014  ",
@@ -30,6 +34,7 @@ var education = {
     {
       "name": "University of California, Davis",
       "location": "Davis, California",
+      "place_id": "ChIJP1SVlJkphYAR_4_ibhs_AcM",
       "degree": "MS",
       "major": "Biological and Agricultural Engineering",
       "dates": "2001-2003 ",
@@ -38,6 +43,7 @@ var education = {
     {
       "name": "University of Kentucky",
       "location": "Lexington, Kentucky",
+      "place_id": "ChIJJeuczClEQogR3U-MkEGD8IQ",
       "degree": "BS",
       "major": "Biological and Agricultural Engineering",
       "dates": "1995-2000 ",
@@ -84,6 +90,7 @@ var work = {
       "employer": "Streamborn",
       "title": "Senior Engineer",
       "location": "Berkeley, California",
+      "place_id": "ChIJ00mFOjZ5hYARk-l1ppUV6pQ",
       "dates": "2006-2010, 2013-2015",
       "url": "https://www.linkedin.com/in/streamborn",
       "description": "Slow-carb hashtag selfies, kitsch kinfolk retro DIY fanny pack raw denim swag meggings shoreditch tattooed gluten-free four loko. Pickled direct trade narwhal, hella mixtape knausgaard plaid biodiesel distillery."
@@ -92,6 +99,7 @@ var work = {
       "employer": "Iris Environmental",
       "title": "Engineer",
       "location": "Oakland, California",
+      "place_id": "ChIJA-2qKIt9hYARZ5N1NdUVtHE",
       "dates": "2010-2013",
       "url": "http://www.irisenv.com/",
       "description": "Vice green juice direct trade everyday carry banjo put a bird on it, ethical vinyl microdosing roof party. Paleo chambray slow-carb pitchfork. "
@@ -100,6 +108,7 @@ var work = {
       "employer": "Kennedy-Jenks Consultants",
       "title": "Staff Engineer",
       "location": "Sacramento, California",
+      "place_id": "ChIJ-ZeDsnLGmoAR238ZdKpqH5I", //retrieved from placeData via Google in helper.js
       "dates": "2003-2006",
       "url": "http://www.kennedyjenks.com/",
       "description": "Letterpress before they sold out knausgaard, XOXO banh mi ramps readymade. Ugh food truck etsy poutine, sriracha asymmetrical tote bag next level truffaut helvetica."
@@ -108,6 +117,7 @@ var work = {
       "employer": "USDA",
       "title": "Staff Engineer",
       "location": "Moscow, Idaho",
+      "place_id": "ChIJ0WHAIi0hoFQRbK3q5g0V_T4",
       "dates": "2000",
       "url": "http://www.fsa.usda.gov/",
       "description": "Slow-carb hashtag selfies, kitsch kinfolk retro DIY fanny pack raw denim swag meggings shoreditch tattooed gluten-free four loko. Pickled direct trade narwhal, hella mixtape knausgaard plaid biodiesel distillery."
@@ -143,6 +153,7 @@ var projects = {
 }
 
 // HEADER Begin
+//Bio via an 'Encapsulating Function'
 bio.display = function() {
   // Name and Title
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -150,7 +161,7 @@ bio.display = function() {
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
 
-  //Refactor (so not repeating) BEGIN:
+  //Refactor at some point (so not repeating) BEGIN:
   // Contact Info
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   $("#topContacts").append(formattedEmail);

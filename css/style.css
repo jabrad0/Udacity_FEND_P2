@@ -111,7 +111,7 @@ a {
 }
 
 #skills {
-  /*display: block;*/
+  display: block;
 }
 
 #skillsH3 {
@@ -167,6 +167,19 @@ ul {
   list-style-type: none;
 }
 
+/*map infowindow*/
+.iw_title {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px;
+  background-color: #48b5e9;
+  color: white;
+  margin: 1px;
+  border-radius: 10px; /* In accordance with the rounding of the default infowindow corners. */
+}
+.iw_city {
+  text-align: center;
+}
 .biopic {
   float: left;
   padding: 10px;
