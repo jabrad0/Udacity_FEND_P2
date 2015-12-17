@@ -13,7 +13,9 @@
   padding-left: 5%;
   padding-right: 5%;
 }
-
+#header {
+  padding-top: 70px;
+}
 h1 {
   font-size: 40px;
   color: #F5A623;
@@ -27,6 +29,7 @@ h2 {
   color: #999999;
   line-height: 29px;
   padding: 10px;
+
 }
 
 h3 {
@@ -34,8 +37,8 @@ h3 {
   font-size: 20px;
   color: #000000;
   line-height: 22px;
+  padding-top: 20px;
 }
-
 h4 {
   font-weight: bold;
   font-size: 14px;
@@ -44,12 +47,13 @@ h4 {
 }
 
 h2, h3, h4, h5 {
-  padding:10px;
   padding-left: 5%;
   padding-right: 5%;
 }
 
-
+#projects, #education, #work-experience {
+  padding-top: 50px;
+}
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -79,6 +83,15 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#topContacts {
+  padding-top: 0px;
 }
 
 #topContacts a {
@@ -145,6 +158,7 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
+  margin-top: auto;
 }
 
 .flex-box {
@@ -166,6 +180,13 @@ a {
 ul {
   list-style-type: none;
 }
+
+#skills {
+  columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
+}
+
 
 /*map infowindow*/
 .iw_title {
@@ -205,6 +226,7 @@ img {
 
 span {
   padding: 5px;
+  color: #000000;
 }
 
 #letsConnect {
@@ -253,4 +275,14 @@ span {
   .biopic {
     display: block;
   }
+}
+
+.navbar-inverse {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  top: 0;
+  margin-bottom: 0px;
+  border-radius: 0px;
 }

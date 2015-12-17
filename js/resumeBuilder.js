@@ -58,28 +58,28 @@ var education = {
       "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     },
     {
-      "title": "Python Stuff - List out",
+      "title": "Python Courses: Object-Oriented, Collections, Functional Programming, RegEx, Flask",
       "school": "Treehouse",
       "dates": "2015",
-      "url": "www.xyx"
+      "url": "https://teamtreehouse.com/"
     },
     {
-      "title": "Algorithm Design",
+      "title": "Algorithms: Design and Analysis, Part 1",
       "school": "Coursera",
       "dates": "Winter 2015",
-      "url": "www.xyx"
+      "url": "https://www.coursera.org/course/algo"
     },
     {
       "title": "Learn Python the Hard Way",
-      "school": "xyz",
+      "school": "Zed Shaw",
       "dates": "Summer 2014",
-      "url": "www.xyx"
+      "url": "http://learnpythonthehardway.org/"
     },
     {
-      "title": "CS90",
-      "school": "Coursera",
+      "title": "CS50",
+      "school": "Harvard.edu",
       "dates": "Spring 2014",
-      "url": "www.xyx"
+      "url": "https://cs50.harvard.edu/"
     }
   ]
 }
@@ -133,21 +133,21 @@ var projects = {
       "url":"url here",
       "dates":"Fall 2015",
       "description": "Skateboard YOLO austin hoodie, squid cred hammock schlitz craft beer asymmetrical green juice. Ethical PBR&B you probably haven't heard of them blue bottle lo-fi bespoke, stumptown schlitz. Ugh try-hard occupy hoodie meh, beard brooklyn tofu. Fap iPhone blue bottle bitters fixie crucifix. Cold-pressed shabby chic venmo, schlitz cronut bitters slow-carb vinyl cliche aesthetic gluten-free. Listicle humblebrag fashion axe actually.",
-      "images": ["images/197x148.gif", "images/197x148.gif"]
+      "images": ["images/udacity_P1_197x148.png", "images/udacity_P2_197x148.png"]
     },
     {
       "title":"Getgo",
       "url":"https://getartandgo.herokuapp.com/",
       "dates":"Fall 2014",
       "description": "Kinfolk cray raw denim lumbersexual, waistcoat pork belly tacos wolf shabby chic. Microdosing thundercats roof party, tattooed dreamcatcher migas actually hoodie ennui mixtape umami twee tofu kogi 3 wolf moon. Trust fund 8-bit pitchfork, hammock cold-pressed keffiyeh crucifix aesthetic migas.",
-      "images": ["images/197x148.gif", "images/197x148.gif"]
+      "images": ["images/getgo_home_197x148.png", "images/getgo_route_197x148.png", "images/getgo_summary_197x148.png"]
     },
     {
       "title":"Spiritual Corky",
       "url":"https://twitter.com/spiritual_corky",
       "dates":"Winter 2015",
       "description": "Hashtag tofu yuccie shabby chic, leggings 90's meh flexitarian sriracha ramps green juice forage migas chillwave. Cornhole actually chicharrones, lomo fap pitchfork single-origin coffee chambray shabby chic post-ironic messenger bag four dollar toast irony viral. Polaroid pork belly marfa, chia salvia cred mlkshk pour-over irony butcher twee forage 8-bit wolf. ",
-      "images": ["images/197x148.gif", "images/197x148.gif"]
+      "images": ["images/corky_home_197x148.png", "images/197x148.gif"]
     }
   ]
 }
@@ -212,7 +212,7 @@ bio.display = function() {
 //Work Experience via an 'Encapsulating Function'
 work.display = function() {
   for (job in work.jobs) {
-    $("#workExperience").append(HTMLworkStart);
+    $("#work-experience").append(HTMLworkStart);
 
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
     formattedEmployer = formattedEmployer.replace("#", work.jobs[job].url);
@@ -283,9 +283,12 @@ education.displayOnline = function() {
   var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
   var formattedTitleSchool = formattedTitle + formattedSchool;
   $(".education-entry:last").append(formattedTitleSchool);
+
   var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourse].dates);
   $(".education-entry:last").append(formattedDates);
+
   var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
+  formattedonlineURL = formattedonlineURL.replace("#", education.onlineCourses[onlineCourse].url);
   $(".education-entry:last").append(formattedonlineURL);
    };
 };

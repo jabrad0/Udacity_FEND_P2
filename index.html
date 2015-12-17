@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Resume</title>
-  <link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brady Resume</title>
 
-  <!--
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:100,300'>
+
+    <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
   about what is actually visible on a website.
@@ -19,44 +23,78 @@
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="js/jQuery.js"></script>
-  <script src="js/helper.js"></script>
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-  <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- ToDo - remove jQuery file from gitHub at final production -->
+    <!-- <script src="js/jQuery.js"></script> -->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+
 
 </head>
 
-<body unresolved>
-  <div id="main">
-    <div id="header" class="center-content clearfix">
-      <ul id="topContacts" class='flex-box'></ul>
-    </div>
-    <div style='clear: both;'></div>
-    <div id="projects" class='gray'>
-      <h2>Projects</h2>
+<body>
+    <div id="main">
+      <nav class="navbar navbar-inverse navbar-static-top" id="nav" >
+        <div class="container">
+          <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Online Resume</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Home</a>
+                      </li>
+                      <li><a href="#projects">Projects</a>
+                      </li>
+                      <li><a href="#education">Education</a>
+                      </li>
+                      <li><a href="#work-experience">Work Experience</a>
+                      </li>
+                      <li><a href="#mapDiv">Places</a>
+                      </li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+              </div><!--/.container -->
+          </nav><!--/.navbar -->
 
-    </div>
-    <div id="education">
-      <h2>Education</h2>
+        <div id="header" class="center-content clearfix">
+            <ul id="topContacts" class='flex-box'></ul>
+        </div>
+        <div style='clear: both;'></div>
+
+
+
+
+
+        <div id="projects" class='gray'>
+            <h2>Projects</h2>
+        </div>
+        <div id="education">
+            <h2>Education</h2>
+        </div>
+        <div id="work-experience" class='gray'>
+            <h2>Work Experience</h2>
+        </div>
+        <div id="mapDiv">
+            <h2>Where I Have Been Productive...</h2>
+        </div>
+
+        <div id="letsConnect" class='dark-gray'>
+            <h2 class='orange center-text'>Let's Connect</h2>
+            <ul id="footerContacts" class="flex-box">
+            </ul>
+        </div>
     </div>
 
-    <div id="workExperience" class='gray'>
-      <h2>Work Experience</h2>
-    </div>
-
-    <div id="mapDiv">
-      <h2>Where I've Been Productive</h2>
-    </div>
-
-    <div id="letsConnect" class='dark-gray'>
-      <h2 class='orange center-text'>Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div>
-
-  <script src="js/resumeBuilder.js"></script>
-  <!--
+    <script src="js/resumeBuilder.js"></script>
+    <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
   a quiz. Essentially, the next few lines are checking to see if you have not
   changed each section of the resume. If you have not made any changes to a section
@@ -64,28 +102,30 @@
   course.
   -->
 
-  <script type="text/javascript">
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('letsConnect').style.display = 'none';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
+
+    <script type="text/javascript">
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('topContacts').style.display = 'none';
+        }
+        if (document.getElementsByTagName('h1').length === 0) {
+            document.getElementById('header').style.display = 'none';
+        }
+        if (document.getElementsByClassName('work-entry').length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }
+        if (document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+        }
+        if (document.getElementsByClassName('education-entry').length === 0) {
+            document.getElementById('education').style.display = 'none';
+        }
+        if (document.getElementsByClassName('flex-item').length === 0) {
+            document.getElementById('letsConnect').style.display = 'none';
+        }
+        if (document.getElementById('map') === null) {
+            document.getElementById('mapDiv').style.display = 'none';
+        }
+    </script>
 </body>
+
 </html>

@@ -6,10 +6,10 @@ var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">linkedin:</s
 var HTMLlinkedinURL = '<span class="white-text"><a href="#" target="_blank">%data%</a></span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email:</span><span class="white-text">%data%</span></li>';
 var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter:</span>';
-var HTMLtwitterURL = '<span class="white-text"><a href="#" target="_blank">%data%</a></span></li>';
+var HTMLtwitterURL = '<span class="white-text"><a href="https://twitter.com/juli_brady" target="_blank">%data%</a></span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">github:</span>';
 var HTMLgithubURL = '<span class="white-text"><a href="#" target="_blank">%data%</a></span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location:</span>';
 var HTMLlocationURL = '<span class="white-text"><a href="#" target="_blank">%data%</a></span></li>';
 
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
@@ -45,7 +45,7 @@ var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#" target="_blank">%data%';
 var HTMLonlineSchool = ' — %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<a href="#" target="_blank">%data%</a>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
@@ -83,6 +83,7 @@ $(document).click(function(loc) {
 
   logClicks(x,y);
 });
+
 
 // Google Map
 // documentation: //https://developers.google.com/maps/documentation/javascript/reference
