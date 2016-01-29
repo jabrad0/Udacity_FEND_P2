@@ -27,7 +27,7 @@ var education = {
         'name': 'Hackbright Academy',
         'location': 'San Francisco, California',
         'place_id': 'ChIJIQBpAG2ahYAR_6128GcTUEo',
-        'degree': 'Technical Training in Full Stack Web Development',
+        'degree': 'Full Stack Web Development',
         'major': 'NA',
         'dates': 'Fall 2014  ',
         'url': 'https://hackbrightacademy.com/'
@@ -54,7 +54,12 @@ var education = {
         'dates': 'Fall 2015 - Winter 2016',
         'url': 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
     }, {
-        'title': 'Python Courses: Object-Oriented, Collections, Functional Programming, RegEx, Flask',
+        'title': 'How to Use Git and GitHub',
+        'school': 'Udacity',
+        'dates': 'Fall 2015',
+        'url': 'https://www.udacity.com/course/how-to-use-git-and-github--ud775'
+    }, {
+        'title': 'Various Python Courses',
         'school': 'Treehouse',
         'dates': '2015',
         'url': 'https://teamtreehouse.com/'
@@ -115,35 +120,42 @@ var work = {
 };
 
 var projects = {
-    'project' : [{
-        'title' : 'Udacity FrontEnd Nanodegree',
-        'stack' : ['Javascript','jQuery','HTML5','CSS','HTML5 Canvas','GoogleMaps API'],
-        'url' : 'You are here!',
-        'dates' : 'Fall 2015 - Winter 2016',
-        'description' : 'This project is currently in progress and will have six mini projects upon completion. I signed up for the Udacity FrontEnd Nanodegree course in order to work on my fundamental understanding of responsive web design and optimization as well as continuing to work on my HTML, CSS, and Javascript skills. Including this resume page, and the associated portfolio site accompanying this page, I the link above will take you to a list of the pages with a brief description of their highlights.',
-        //'images: {'image href': [alt text, CaptionText, LargeImageSRC, liveURL], image href#2 : [ array of values]}
-        'images' : {'images/portfolio_197x142.png': ['Screenshot of Portfolio Home Page','More Stuff',                                            'images/portfolio_500x360.png'],
+     'project': [{
+      'title': 'Udacity FrontEnd Nanodegree',
+      'stack': ['Javascript', 'jQuery', 'HTML5', 'CSS', 'HTML5 Canvas', 'GoogleMaps API'],
+      'url': 'NA',
+      'dates': 'Fall 2015 - Winter 2016',
+      'description': 'This project is currently in progress and will have six mini projects upon completion. I signed up for the Udacity FrontEnd Nanodegree course in order to work on my fundamental understanding of responsive web design and optimization as well as continuing to work on my HTML, CSS, and Javascript skills. Including this resume page, and the associated portfolio site accompanying this page, I the link above will take you to a list of the pages with a brief description of their highlights.',
+      //'images: {'image href': [alt text, CaptionText, LargeImageSRC, liveURL], image href#2 : [ array of values]}
+      'images': {
+       'images/portfolio_197x142.png': ['Screenshot of Portfolio Home Page', 'More Stuff', 'images/portfolio_500x360.png'],
 
-        'images/resume_197x142.png':['Screenshot of Resume','More words...','images/resume_500x360.png'],
+       'images/resume_197x142.png': ['Screenshot of Resume', 'More words...', 'images/resume_500x360.png'],
 
-        'images/frogger_197x142.png': ['Screenshot of Arcade Game Webpage','Arcade game was designed to Cliche chia wayfarers vinyl distillery godard lomo. Portland 8-bit lumbersexual, viral +1 ugh stumptown. Pug bespoke 3 wolf moon brooklyn, raw denim vegan heirloom gastropub bitters. Meh brunch organic fanny pack tilde street art hammock pinterest, helvetica williamsburg XOXO meggings microdosing farm-to-table.','images/frogger_500x360.png', 'https://www.google.com/']}
-    }, {
-        'title' : 'Getgo',
-        'stack' : ['Python','Javascript','Flask', 'jQuery', 'Ajax', 'Jinja', 'HTML5', 'CSS', 'GoogleMaps API', 'Twitter API'],
-        'url' : 'https://getartandgo.herokuapp.com/',
-        'dates' : 'Fall 2014',
-        'description' : 'Getgo was my capstone project while attending Hackbright Academy. It was independantly developed in five weeks after five weeks of fullstack web development "bootcamp". I wanted to build an application to allow a user to find the best bike route to art and wine venues wuthin a certain distance of their current location within the city of Oakland CA. I also wanted to log the users travels for the day and report their adventure back to them.',
-        'images' : {'images/getgo_197x142.png':["Screenshot of Getgo Application Home Page", "Getgo Stuff", 'images/getgo_500x360.png'], 'images/getgo_route_197x142.png':["Second Screenshot of Getgo Application", "More Getgo Stuff", 'images/getgo_route_500x360.png'], 'images/getgo_report_197x142.png':["Second Screenshot of Getgo Application", "And More Getgo Stuff", 'images/getgo_report_500x360.png']}
-    }, {
-        'title' : 'Spiritual Corky',
-        'stack' : ['Python','Twitter API'],
-        'url' : 'https://twitter.com/spiritual_corky',
-        'dates' : 'Winter 2015',
-        'description' : 'ALSO MENTION N-grams  This project is a Python script I run from my Mac terminal. The script generates a mashup quote from the movies "Waiting for Guffman" and "Jesus Christ Superstar" using <a href = www.google.com class="inline_link">Markov Chains </a>, then uses the Twitter API to create live Twitter feed.',
-        'images' : {'images/corky_197x142.png':["Screenshot of Twitter Feed for Spiritual Corky", "Twitter Stuff", 'images/corky_500x360.png']}
+       'images/frogger_197x142.png': ['Screenshot of Arcade Game Webpage', 'Arcade game was designed to Cliche chia wayfarers vinyl distillery godard lomo. Portland 8-bit lumbersexual, viral +1 ugh stumptown. Pug bespoke 3 wolf moon brooklyn, raw denim vegan heirloom gastropub bitters. Meh brunch organic fanny pack tilde street art hammock pinterest, helvetica williamsburg XOXO meggings microdosing farm-to-table.', 'images/frogger_500x360.png', 'https://www.google.com/']
+      }
+     }, {
+      'title': 'Getgo',
+      'stack': ['Python', 'Javascript', 'Flask', 'jQuery', 'Ajax', 'Jinja', 'HTML5', 'CSS', 'GoogleMaps API', 'Twitter API'],
+      'url': 'https://getartandgo.herokuapp.com/',
+      'dates': 'Fall 2014',
+      'description': 'Getgo was my capstone project while attending Hackbright Academy. It was independantly developed in five weeks after five weeks of fullstack web development "bootcamp". I wanted to build an application to allow a user to find the best bike route to art and wine venues wuthin a certain distance of their current location within the city of Oakland CA. I also wanted to log the users travels for the day and report their adventure back to them.',
+      'images': {
+       'images/getgo_197x142.png': ["Screenshot of Getgo Application Home Page", "Getgo Stuff", 'images/getgo_500x360.png'],
+       'images/getgo_route_197x142.png': ["Second Screenshot of Getgo Application", "More Getgo Stuff", 'images/getgo_route_500x360.png'],
+       'images/getgo_report_197x142.png': ["Second Screenshot of Getgo Application", "And More Getgo Stuff", 'images/getgo_report_500x360.png']
+      }
+     }, {
+      'title': 'Spiritual Corky',
+      'stack': ['Python', 'Twitter API'],
+      'url': 'https://twitter.com/spiritual_corky',
+      'dates': 'Winter 2015',
+      'description': 'ALSO MENTION N-grams  This project is a Python script I run from my Mac terminal. The script generates a mashup quote from the movies "Waiting for Guffman" and "Jesus Christ Superstar" using <a href = www.google.com class="inline_link">Markov Chains </a>, then uses the Twitter API to create live Twitter feed.',
+      'images': {
+       'images/corky_197x142.png': ["Screenshot of Twitter Feed for Spiritual Corky", "Twitter Stuff", 'images/corky_500x360.png']
+      }
      }]
 };
-
 // HEADER Begin
 //Bio via an 'Encapsulating Function'
 var data = '%data%';
@@ -224,14 +236,17 @@ projects.display = function() {
   for (var i=0; i < lenProjects; i++ ) {
     var thisProject = projects.project[i];
     $("#projects").append(HTMLprojectStart);
-    var formattedTitle = HTMLprojectTitle.replace(data, thisProject.title)
-      .replace("#", thisProject.url);
-    var formattedURL = HTMLprojectURL.replace(data, thisProject.url);
-    var formattedTitleURL = formattedTitle + formattedURL;
-    var formattedDates = HTMLprojectDates.replace(data, thisProject.dates);
-    var formattedDescription = HTMLprojectDescription.replace(data,
-      thisProject.description);
-    $(".project-entry:last").append(formattedTitleURL);
+
+    if (thisProject.url === "NA") {
+      var formattedTitle = HTMLprojectTitleNoLink.replace(data, thisProject.title);
+      $(".project-entry:last").append(formattedTitle);
+    } else {
+      var formattedTitle = HTMLprojectTitle.replace(data, thisProject.title)
+        .replace("#", thisProject.url);
+      var formattedURL = HTMLprojectURL.replace(data, thisProject.url);
+      var formattedTitleURL = formattedTitle + formattedURL;
+      $(".project-entry:last").append(formattedTitleURL);
+    }
 
     $(".project-entry:last").append(HTMLstackStart);
     var lenStack = thisProject.stack.length;
@@ -240,7 +255,9 @@ projects.display = function() {
       var formattedStack = HTMLstack.replace(data, thisProject.stack[j]);
       $(".project-entry:last").append(formattedStack + separator);
     }
-
+    var formattedDates = HTMLprojectDates.replace(data, thisProject.dates);
+    var formattedDescription = HTMLprojectDescription.replace(data,
+      thisProject.description);
     $(".project-entry:last").append(formattedDates,formattedDescription);
 
     for (var key in thisProject.images) {
@@ -249,7 +266,7 @@ projects.display = function() {
       $(".project-entry:last").append(formattedImage);
     }
   }
-// Start Lightbox code
+  // Start Lightbox code
   var $overlay = $("<div id='overlay'></div>");
   var $image = $("<img class='lightbox-img'>");
   var $caption = $("<p class='project-focus'></p>");
