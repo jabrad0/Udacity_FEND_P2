@@ -30,9 +30,11 @@ var HTMLworkDescription = '<p><br>%data%</p>';
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#" target="_blank">%data%';
 var HTMLprojectURL = ' — %data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
+var HTMLstackStart = '<div class="stack">Stack:  </div>';
+var HTMLstack = '<div class="stack">%data% </div>';
+var HTMLprojectDates = '<br><div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<a href="#" class="project-img"><img class="project-img" src="%data%"></a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#" target="_blank">%data%';
@@ -51,15 +53,6 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
-/*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
-*/
-// $(document).ready(function() {
-//   $('button').click(function() {
-//     var iName = inName(name) || function(){};
-//     $('#name').html(iName);
-//   });
-// });
 
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
@@ -68,33 +61,43 @@ The next few lines about clicks are for the Collecting Click Locations quiz in L
 clickLocations = [];
 
 
-// Whenthe navbar's position is fixed, then jumping to a in-page anchor link places
-//the initial content for that anchor under the navbar, hidden from the user.
-//This code below fixes it:
-
+/*
+ Whenthe navbar's position is fixed, then jumping to a in-page anchor link places
+ the initial content for that anchor under the navbar, hidden from the user.
+ This code fixes it:
+*/
 var shiftWindow = function() {
     scrollBy(0, -80)
 };
 if (location.hash) shiftWindow();
 window.addEventListener("hashchange", shiftWindow);
 
+// /*
+//  * Logs x,y coordinates in console
+//  */
+// function logClicks(x, y) {
+//     clickLocations.push({
+//         x: x,
+//         y: y
+//     });
+//     console.log('x location: ' + x + '; y location: ' + y);
+// }
+//
+// $(document).click(function(loc) {
+//     var x = loc.pageX;
+//     var y = loc.pageY;
+//
+//     logClicks(x, y);
+// });
 
 
-
-function logClicks(x, y) {
-    clickLocations.push({
-        x: x,
-        y: y
-    });
-    console.log('x location: ' + x + '; y location: ' + y);
-}
-
-$(document).click(function(loc) {
-    var x = loc.pageX;
-    var y = loc.pageY;
-
-    logClicks(x, y);
+//-------------------------------
+//Toggle Active class on NavBar
+$(".nav a").on("click", function(){
+  $(".nav").find(".active").removeClass("active");
+  $(this).parent().addClass("active");
 });
+//-------------------------------
 
 
 // Google Map

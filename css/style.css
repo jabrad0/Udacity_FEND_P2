@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .clearfix {
@@ -16,8 +16,20 @@
     padding-right: 5%;
 }
 
+.project-entry:nth-child(n+3){
+  padding-top: 4%;
+}
+
 #header {
     padding-top: 70px;
+}
+
+.inline_link {
+  display: inline;
+}
+
+.stack {
+  display: inline;
 }
 
 h1 {
@@ -85,6 +97,13 @@ a {
     text-decoration: none;
     margin-top: 10px;
     display: block;
+}
+.project-img{
+  margin-top: 10px;
+  margin-right: 15px;
+}
+a.project-img {
+  display:inline;
 }
 
 hr {
@@ -183,6 +202,27 @@ ul {
     columns: 4;
     -webkit-columns: 4;
     -moz-columns: 4;
+}
+
+
+/*Lightbox overlay*/
+#overlay {
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+}
+
+#overlay img {
+ margin-top: 20%;
+}
+
+#overlay p {
+ color:white;
 }
 
 /*map infowindow*/

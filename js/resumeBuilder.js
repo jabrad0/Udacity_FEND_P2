@@ -51,7 +51,7 @@ var education = {
     'onlineCourses': [{
         'title': 'Front-End Nanodegree',
         'school': 'Udacity',
-        'dates': 'Fall 2015',
+        'dates': 'Fall 2015 - Winter 2016',
         'url': 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
     }, {
         'title': 'Python Courses: Object-Oriented, Collections, Functional Programming, RegEx, Flask',
@@ -115,24 +115,28 @@ var work = {
 };
 
 var projects = {
-    'project': [{
-        'title': 'Udacity FrontEnd Nanodegree',
-        'url': 'url here',
-        'dates': 'Fall 2015',
-        'description': 'Skateboard YOLO austin hoodie, squid cred hammock schlitz craft beer asymmetrical green juice. Ethical PBR&B you probably haven\'t heard of them blue bottle lo-fi bespoke, stumptown schlitz. Ugh try-hard occupy hoodie meh, beard brooklyn tofu. Fap iPhone blue bottle bitters fixie crucifix. Cold-pressed shabby chic venmo, schlitz cronut bitters slow-carb vinyl cliche aesthetic gluten-free. Listicle humblebrag fashion axe actually.',
-        'images': ['images/udacity_P1_197x148.png', 'images/udacity_P2_197x148.png']
+    'project' : [{
+        'title' : 'Udacity FrontEnd Nanodegree',
+        'stack' : ['Javascript', 'jQuery', 'HTML5', 'CSS', 'HTML5 Canvas', 'GoogleMaps API'],
+        'url' : 'You are here!',
+        'dates' : 'Fall 2015 - Winter 2016',
+        'description' : 'This project is currently in progress and will have six mini projects upon completion. I signed up for the Udacity FrontEnd Nanodegree course in order to work on my fundamental understanding of responsive web design and optimization as well as continuing to work on my HTML, CSS, and Javascript skills. Including this resume page, and the associated portfolio site accompanying this page, I the link above will take you to a list of the pages with a brief description of their highlights.',
+        'images' : ['images/udacity_P1_197x148.png', 'images/udacity_P2_197x148.png', 'images/udacity_P3_197x148.png']
     }, {
-        'title': 'Getgo',
-        'url': 'https://getartandgo.herokuapp.com/',
-        'dates': 'Fall 2014',
-        'description': 'Kinfolk cray raw denim lumbersexual, waistcoat pork belly tacos wolf shabby chic. Microdosing thundercats roof party, tattooed dreamcatcher migas actually hoodie ennui mixtape umami twee tofu kogi 3 wolf moon. Trust fund 8-bit pitchfork, hammock cold-pressed keffiyeh crucifix aesthetic migas.',
-        'images': ['images/getgo_home_197x148.png', 'images/getgo_route_197x148.png', 'images/getgo_summary_197x148.png']
+        'title' : 'Getgo',
+        'stack' : ['Python','Javascript','Flask', 'jQuery', 'Ajax', 'Jinja', 'HTML5', 'CSS', 'GoogleMaps API', 'Twitter API'],
+        'url' : 'https://getartandgo.herokuapp.com/',
+        'dates' : 'Fall 2014',
+        'description' : 'Getgo was my capstone project while attending Hackbright Academy. It was independantly developed in five weeks after five weeks of fullstack web development "bootcamp". I wanted to build an application to allow a user to find the best bike route to art and wine venues wuthin a certain distance of their current location within the city of Oakland CA. I also wanted to log the users travels for the day and report their adventure back to them.',
+        'images' : ['images/getgo_home_197x148.png', 'images/getgo_route_197x148.png', 'images/getgo_summary_197x148.png'],
+
     }, {
-        'title': 'Spiritual Corky',
-        'url': 'https://twitter.com/spiritual_corky',
-        'dates': 'Winter 2015',
-        'description': 'Hashtag tofu yuccie shabby chic, leggings 90\'s meh flexitarian sriracha ramps green juice forage migas chillwave. Cornhole actually chicharrones, lomo fap pitchfork single-origin coffee chambray shabby chic post-ironic messenger bag four dollar toast irony viral. Polaroid pork belly marfa, chia salvia cred mlkshk pour-over irony butcher twee forage 8-bit wolf. ',
-        'images': ['images/corky_home_197x148.png', 'images/197x148.gif']
+        'title' : 'Spiritual Corky',
+        'stack' : ['Python','Twitter API'],
+        'url' : 'https://twitter.com/spiritual_corky',
+        'dates' : 'Winter 2015',
+        'description' : 'ALSO MENTION N-grams  This project is a Python script I run from my Mac terminal. The script generates a mashup quote from the movies "Waiting for Guffman" and "Jesus Christ Superstar" using <a href = www.google.com class="inline_link">Markov Chains </a>, then uses the Twitter API to create live Twitter feed.',
+        'images' : ['images/corky_home_197x148.png']
     }]
 };
 
@@ -216,6 +220,7 @@ work.display = function() {
 //Projects via an 'Encapsulating Function'
 projects.display = function() {
   var lenProjects = projects.project.length;
+
   for (var i=0; i < lenProjects; i++ ) {
     var thisProject = projects.project[i];
     $("#projects").append(HTMLprojectStart);
@@ -226,17 +231,53 @@ projects.display = function() {
     var formattedDates = HTMLprojectDates.replace(data, thisProject.dates);
     var formattedDescription = HTMLprojectDescription.replace(data,
       thisProject.description);
-    $(".project-entry:last").append(formattedTitleURL,formattedDates,
-      formattedDescription);
+    $(".project-entry:last").append(formattedTitleURL);
+
+    $(".project-entry:last").append(HTMLstackStart);
+    var lenStack = thisProject.stack.length;
+    for (var j=0; j<lenStack; j++) {
+      var separator = (j === (lenStack - 1) ) ? " " : ",  ";
+      var formattedStack = HTMLstack.replace(data, thisProject.stack[j]);
+      $(".project-entry:last").append(formattedStack + separator);
+    }
+
+    $(".project-entry:last").append(formattedDates,formattedDescription);
 
     if (thisProject.images.length) {
       var lenProjectImages = thisProject.images.length;
-      for (var j=0; j<lenProjectImages; j++) {
-        var formattedImage = HTMLprojectImage.replace(data, thisProject.images[j]);
+      for (var k=0; k<lenProjectImages; k++) {
+        var formattedImage = HTMLprojectImage.replace(data, thisProject.images[k])
+          .replace("#", thisProject.images[k]);
         $(".project-entry:last").append(formattedImage);
       }
     }
   }
+
+// Start Lightbox code
+  var $overlay = $("<div id='overlay'></div>");
+  var $image = $("<img class='lightbox-img'>");
+  var $caption = $("<p></p>");
+
+  $overlay.append($image);    //An image to overlay
+  $overlay.append($caption);  //A caption to overlay
+
+  $("body").append($overlay);
+
+  $("#projects a").click(function(event){
+    event.preventDefault();
+    var imageLocation = $(this).attr("href");
+    $image.attr("src", imageLocation);
+    $overlay.show();
+
+    var captionText = $(this).children("img").attr("alt");
+    $caption.text(captionText);
+  });
+
+  $overlay.click(function(){
+    $overlay.hide();
+  });   // End lightbox code
+
+
 };
 
 //Education via an 'Encapsulating Function'
@@ -253,7 +294,7 @@ education.displaySchools = function() {
     var formattedLocation = HTMLschoolLocation.replace(data, thisSchool.location);
     $(".education-entry:last").append(formattedNameDegree, formattedDates,
       formattedLocation);
-    if (thisSchool.major == "NA") {
+    if (thisSchool.major === "NA") {
       var HTMLschoolMajor = '<em><br>%data%</em>';
       var formattedMajor = HTMLschoolMajor.replace(data, " ");
       $(".education-entry:last").append(formattedMajor);
@@ -264,6 +305,7 @@ education.displaySchools = function() {
     }
   }
 };
+
 
 var $education = $("#education");
 education.displayOnline = function() {
@@ -289,7 +331,6 @@ work.display();
 projects.display();
 education.displaySchools();
 education.displayOnline();
-
 
 //Google Map
 $("#mapDiv").append(googleMap);
