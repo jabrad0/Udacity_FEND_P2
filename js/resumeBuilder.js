@@ -20,7 +20,7 @@ var bio = {
     'place_id': 'ChIJPZDrEzLsZIgRoNrpodC5P30',
     'bioPic': 'images/300x300.jpg',
     'welcomeMessage': 'I\'m Juli Brady',
-    'skills': ['Python', 'Javascript', 'HTML5', 'CSS', 'Flask', 'Jquery', 'AJAX', 'SQL', 'JSON', 'git', 'GitHub']
+    'skills': ['Python', 'Javascript', 'HTML5', 'CSS', 'Flask', 'Jquery', 'AJAX', 'SQL', 'Bootstrap', 'JSON', 'git', 'GitHub', 'Grunt']
 };
 var education = {
     'schools': [{
@@ -54,6 +54,16 @@ var education = {
         'dates': 'Fall 2015 - Winter 2016',
         'url': 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
     }, {
+        'title': 'Node.js Basics',
+        'school': 'Treehouse',
+        'dates': 'Fall 2015',
+        'url': 'https://teamtreehouse.com/library/nodejs-basics'
+    }, {
+        'title': 'AJAX Basics',
+        'school': 'Treehouse',
+        'dates': 'Fall 2015',
+        'url': 'https://teamtreehouse.com/library/ajax-basics'
+    },{
         'title': 'How to Use Git and GitHub',
         'school': 'Udacity',
         'dates': 'Fall 2015',
@@ -122,37 +132,37 @@ var work = {
 var projects = {
      'project': [{
       'title': 'Udacity FrontEnd Nanodegree',
-      'stack': ['Javascript', 'jQuery', 'HTML5', 'CSS', 'HTML5 Canvas', 'GoogleMaps API'],
+      'stack': ['Javascript', 'jQuery', 'HTML5', 'CSS', 'HTML5 Canvas', 'Bootstrap', 'Grunt', 'GoogleMaps API'],
       'url': 'NA',
       'dates': 'Fall 2015 - Winter 2016',
-      'description': 'This project is currently in progress and will have six mini projects upon completion. I signed up for the Udacity FrontEnd Nanodegree course in order to work on my fundamental understanding of responsive web design and optimization as well as continuing to work on my HTML, CSS, and Javascript skills. Including this resume page, and the associated portfolio site accompanying this page, I the link above will take you to a list of the pages with a brief description of their highlights.',
+      'description': 'This project is currently in progress. It will have six mini projects upon completion. I signed up for the Udacity FrontEnd Nanodegree course in order to improve my fundamental understanding of frontend web development, responsive web design, and optimization as well as continuing to work on my HTML, CSS, and Javascript skills. Click on any project for more details.',
       //'images: {'image href': [alt text, CaptionText, LargeImageSRC, liveURL], image href#2 : [ array of values]}
       'images': {
-       'images/portfolio_197x142.png': ['Screenshot of Portfolio Home Page', 'More Stuff', 'images/portfolio_500x360.png'],
+       'images/portfolio_197x142.png': ['Screenshot of Portfolio Home Page', 'Responsive Portfolio Focus:  dynamically sized items, media queries, CSS flexbox, common responsive patterns, breakpoints, optimizing layouts, image sizing.', 'images/portfolio_500x360.png'],
 
-       'images/resume_197x142.png': ['Screenshot of Resume', 'More words...', 'images/resume_500x360.png'],
+       'images/resume_197x142.png': ['Screenshot of Interactive Resume', 'Interactive Resume Focus: JSON data structures, Javascript (objects, functions, conditionals, and control structures), jQuery, and GoogleMaps API.', 'images/resume_500x360.png'],
 
-       'images/frogger_197x142.png': ['Screenshot of Arcade Game Webpage', 'Arcade game was designed to Cliche chia wayfarers vinyl distillery godard lomo. Portland 8-bit lumbersexual, viral +1 ugh stumptown. Pug bespoke 3 wolf moon brooklyn, raw denim vegan heirloom gastropub bitters. Meh brunch organic fanny pack tilde street art hammock pinterest, helvetica williamsburg XOXO meggings microdosing farm-to-table.', 'images/frogger_500x360.png', 'https://www.google.com/']
+       'images/frogger_197x142.png': ['Screenshot of Arcade Game Webpage', 'Arcade Game Focus: Object-Oriented Javascript, scopes and closures, prototype delegation, the parameter "this", functional, prototypal, and pseudoclassical inheritance models, sub/super classes, and HTML5 Canvas.', 'images/frogger_500x360.png', 'https://www.google.com/']
       }
      }, {
       'title': 'Getgo',
-      'stack': ['Python', 'Javascript', 'Flask', 'jQuery', 'Ajax', 'Jinja', 'HTML5', 'CSS', 'GoogleMaps API', 'Twitter API'],
+      'stack': ['Python', 'Javascript', 'Flask', 'jQuery', 'Ajax', 'Jinja', 'JSON', 'HTML5', 'CSS', 'GoogleMaps API', 'Yelp API', ],
       'url': 'https://getartandgo.herokuapp.com/',
       'dates': 'Fall 2014',
-      'description': 'Getgo was my capstone project while attending Hackbright Academy. It was independantly developed in five weeks after five weeks of fullstack web development "bootcamp". I wanted to build an application to allow a user to find the best bike route to art and wine venues wuthin a certain distance of their current location within the city of Oakland CA. I also wanted to log the users travels for the day and report their adventure back to them.',
+      'description': 'Getgo was my capstone project while attending Hackbright Academy. It was independantly developed in five weeks after five weeks of fullstack web development "bootcamp". I wanted to build an application that allowed a user to find the best bike route to art and wine venues near their current location in Oakland CA. I also wanted to log the user\'s travels for the day and report their adventure back to them. Developer\'s note: An existing address must be entered (201 Orange Street). Click on any image for more details.',
       'images': {
-       'images/getgo_197x142.png': ["Screenshot of Getgo Application Home Page", "Getgo Stuff", 'images/getgo_500x360.png'],
-       'images/getgo_route_197x142.png': ["Second Screenshot of Getgo Application", "More Getgo Stuff", 'images/getgo_route_500x360.png'],
-       'images/getgo_report_197x142.png': ["Second Screenshot of Getgo Application", "And More Getgo Stuff", 'images/getgo_report_500x360.png']
+       'images/getgo_197x142.png': ['Screenshot of Getgo Application Home Page', 'I used static open source data from the City of Oakland that documented art installations around the city as well as the Yelp API for a dynamic repository of local galleries and wineries. This is the home page where the user enters their current location.', 'images/getgo_500x360.png'],
+       'images/getgo_route_197x142.png': ['Second Screenshot of Getgo Application', 'Once the user enters their location, the browser submits the form to the server as HTTP Get request, the Google geocoder API converts the user address to lat/long coordinantes. Then the app makes two AJAX requests to Flask routes - one calls the Yelp API and passes the lat/long coordinate. The other Flask route calls the static JSON file for City of Oakland. I parse the data that is returned, itterate over it, build information windows, and have pins dropped, then I use the Google API to render directions on user clicks.', 'images/getgo_route_500x360.png'],
+       'images/getgo_report_197x142.png': ['Third Screenshot of Getgo Application', 'While the user is clicking locations and the application is rendering directions, these locations are being appended to an array that is accessed when "View Your Stroll" is clicked. The array refreshes when the page refreshes or "Start Over" is clicked.', 'images/getgo_report_500x360.png']
       }
      }, {
       'title': 'Spiritual Corky',
       'stack': ['Python', 'Twitter API'],
       'url': 'https://twitter.com/spiritual_corky',
       'dates': 'Winter 2015',
-      'description': 'ALSO MENTION N-grams  This project is a Python script I run from my Mac terminal. The script generates a mashup quote from the movies "Waiting for Guffman" and "Jesus Christ Superstar" using <a href = www.google.com class="inline_link">Markov Chains </a>, then uses the Twitter API to create live Twitter feed.',
+      'description': 'This project is a Python script run from my Mac terminal. The script generates a random mashup quote from the movies "Waiting for Guffman" and "Jesus Christ Superstar" using <a href = http://setosa.io/blog/2014/07/26/markov-chains/ target = "_blank" class="inline_link">Markov Chains </a>. I use the Twitter API to create the live Twitter feed. Click on the image for more details.',
       'images': {
-       'images/corky_197x142.png': ["Screenshot of Twitter Feed for Spiritual Corky", "Twitter Stuff", 'images/corky_500x360.png']
+         'images/corky_197x142.png': ["Screenshot of Twitter Feed for Spiritual Corky", "Basically, a python dictionary is built with the keys being a sequence (tuple) of n words (n is provided as an input argument when the script is run) and the value being word n+1. (If the key already exists, rather than overwrite this key value pair - this value of the key is appended giving the key more than 1 value.) Initially, the script randomly picks a key and pairs it with its value (randomly chosen if more than one exists). This is the 'seed' of the Markov Chain. The script then moves to the second word in that key which becomes the first word in a new key and previous word n+1 is now assigned as the last word of the new key. A value of this key is randomly chosen. After a hardcoded number of cycles, these pairings are concatenated together and tweeted.", 'images/corky_500x360.png']
       }
      }]
 };
