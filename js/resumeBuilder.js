@@ -30,7 +30,8 @@ var education = {
         'degree': 'Full Stack Web Development',
         'major': 'NA',
         'dates': 'Fall 2014  ',
-        'url': 'https://hackbrightacademy.com/'
+        'url': 'https://hackbrightacademy.com/',
+        'publication' : 'NA'
     }, {
         'name': 'University of California, Davis',
         'location': 'Davis, California',
@@ -38,7 +39,8 @@ var education = {
         'degree': 'MS',
         'major': 'Biological and Agricultural Engineering',
         'dates': '2001-2003 ',
-        'url': 'http://bae.engineering.ucdavis.edu/'
+        'url': 'http://bae.engineering.ucdavis.edu/',
+        'publication' : 'http://www.sciencedirect.com/science/article/pii/S0167880905005633'
     }, {
         'name': 'University of Kentucky',
         'location': 'Lexington, Kentucky',
@@ -46,7 +48,8 @@ var education = {
         'degree': 'BS',
         'major': 'Biological and Agricultural Engineering',
         'dates': '1995-2000 ',
-        'url': 'http://www.uky.edu/bae/'
+        'url': 'http://www.uky.edu/bae/',
+        'publication' : 'NA'
     }],
     'onlineCourses': [{
         'title': 'Front-End Nanodegree',
@@ -99,7 +102,7 @@ var work = {
             'place_id': 'ChIJ00mFOjZ5hYARk-l1ppUV6pQ',
             'dates': '2006-2010, 2013-2015',
             'url': 'https://www.linkedin.com/in/streamborn',
-            'description': 'Slow-carb hashtag selfies, kitsch kinfolk retro DIY fanny pack raw denim swag meggings shoreditch tattooed gluten-free four loko. Pickled direct trade narwhal, hella mixtape knausgaard plaid biodiesel distillery.'
+            'description': 'Managed simultaneous projects, budgets, and deadlines for ongoing investigation remediation projects. Projects included large scale excavations, subsurface drilling, construction, and implementation of remediation systems. Prepared proposals and cost estimates for clients. Interacted with clients and government regulators. Made on-the-spot project decisions in the field.'
         }, {
             'employer': 'Iris Environmental',
             'title': 'Engineer',
@@ -107,7 +110,7 @@ var work = {
             'place_id': 'ChIJA-2qKIt9hYARZ5N1NdUVtHE',
             'dates': '2010-2013',
             'url': 'http://www.irisenv.com/',
-            'description': 'Vice green juice direct trade everyday carry banjo put a bird on it, ethical vinyl microdosing roof party. Paleo chambray slow-carb pitchfork. '
+            'description': 'Collaborated with teams regarding investigation remediation project strategies. Managed multiple internal staff, contractors, and projects. Prepared technical reports. Developed a sampling program and trained staff on best use.'
         }, {
             'employer': 'Kennedy-Jenks Consultants',
             'title': 'Staff Engineer',
@@ -115,7 +118,7 @@ var work = {
             'place_id': 'ChIJ-ZeDsnLGmoAR238ZdKpqH5I', //retrieved from placeData via Google in helper.js
             'dates': '2003-2006',
             'url': 'http://www.kennedyjenks.com/',
-            'description': 'Letterpress before they sold out knausgaard, XOXO banh mi ramps readymade. Ugh food truck etsy poutine, sriracha asymmetrical tote bag next level truffaut helvetica.'
+            'description': 'Conducted field work to investigate contaminated soil and groundwater. Produced project investigation reports. Provided QA/QC on large amounts of investigation data.'
         }, {
             'employer': 'USDA',
             'title': 'Staff Engineer',
@@ -123,7 +126,7 @@ var work = {
             'place_id': 'ChIJ0WHAIi0hoFQRbK3q5g0V_T4',
             'dates': '2000',
             'url': 'http://www.fsa.usda.gov/',
-            'description': 'Slow-carb hashtag selfies, kitsch kinfolk retro DIY fanny pack raw denim swag meggings shoreditch tattooed gluten-free four loko. Pickled direct trade narwhal, hella mixtape knausgaard plaid biodiesel distillery.'
+            'description': ['Conducted post-wildfire research in the Bitterroot Valley of Montana in order to compare simulated rain infiltration rates on severly burned areas with that of undistrubed areas.', 'http://forest.moscowfsl.wsu.edu/engr/library/Robichaud/Robichaud2001i/2001i.html']
         }
 
     ]
@@ -140,9 +143,9 @@ var projects = {
       'images': {
        'images/portfolio_197x142.png': ['Screenshot of Portfolio Home Page', 'Responsive Portfolio Focus:  dynamically sized items, media queries, CSS flexbox, common responsive patterns, breakpoints, optimizing layouts, image sizing.', 'images/portfolio_500x360.png'],
 
-       'images/resume_197x142.png': ['Screenshot of Interactive Resume', 'Interactive Resume Focus: JSON data structures, Javascript (objects, functions, conditionals, and control structures), jQuery, and GoogleMaps API.', 'images/resume_500x360.png'],
+       'images/resume_197x142.png': ['Screenshot of Interactive Resume', 'Interactive Resume Focus: JSON data structures, Javascript (objects, functions, conditionals, and control structures), jQuery, PDF.js, and GoogleMaps API.', 'images/resume_500x360.png'],
 
-       'images/frogger_197x142.png': ['Screenshot of Arcade Game Webpage', 'Arcade Game Focus: Object-Oriented Javascript, scopes and closures, prototype delegation, the parameter "this", functional, prototypal, and pseudoclassical inheritance models, sub/super classes, and HTML5 Canvas.', 'images/frogger_500x360.png', 'https://www.google.com/']
+       'images/frogger_197x142.png': ['Screenshot of Arcade Game Webpage', 'Arcade Game Focus: Object-Oriented Javascript, scopes and closures, prototype delegation, the parameter "this", functional, prototypal, and pseudoclassical inheritance models, sub/super classes, and HTML5 Canvas.', 'images/frogger_500x360.png', '../3_Project_FEND_Arcadegame/arcade_game.html']
       }
      }, {
       'title': 'Getgo',
@@ -219,6 +222,9 @@ bio.display = function() {
             $("#skills").append(formattedSkill);
         }
     }
+    // Resume PDF using pdf.js Library
+    var resumePdf = '<hr><div class="resumePdf flex-box"><a href="../../pdf.js/web/viewer.html" target="_blank">Downloadable Resume</a></div>';
+    $("#header").append(resumePdf);
 };
 // HEADER End
 
@@ -234,9 +240,18 @@ work.display = function() {
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
     var formattedLocation = HTMLworkLocation.replace(data, thisJob.location);
     var formattedDates = HTMLworkDates.replace(data, thisJob.dates);
-    var formattedDescription = HTMLworkDescription.replace(data, thisJob.description);
     $(".work-entry:last").append(formattedEmployerTitle,formattedLocation,
-      formattedDates,formattedDescription);
+      formattedDates);
+
+    if (typeof thisJob.description === 'object' ) {
+      var formattedDescription = HTMLworkDescription.replace(data, thisJob.description[0]);
+      var formattedworkPublication = HTMLworkPublicationStart + HTMLworkPublication.replace("#", thisJob.description[1]).replace(data, thisJob.description[1]);
+      $(".work-entry:last").append(formattedDescription, formattedworkPublication);
+    } else {
+      var formattedDescription = HTMLworkDescription.replace(data, thisJob.description);
+      $(".work-entry:last").append(formattedDescription);
+    }
+
   }
 };
 
@@ -337,6 +352,7 @@ education.displaySchools = function() {
     var formattedLocation = HTMLschoolLocation.replace(data, thisSchool.location);
     $(".education-entry:last").append(formattedNameDegree, formattedDates,
       formattedLocation);
+
     if (thisSchool.major === "NA") {
       var HTMLschoolMajor = '<em><br>%data%</em>';
       var formattedMajor = HTMLschoolMajor.replace(data, " ");
@@ -346,6 +362,12 @@ education.displaySchools = function() {
       formattedMajor = HTMLschoolMajor.replace(data, education.schools[i].major);
       $(".education-entry:last").append(formattedMajor);
     }
+    if (thisSchool.publication != "NA") {
+      var formattedschoolPublication = HTMLschoolPublicationStart + HTMLschoolPublication.replace("#", thisSchool.publication).replace(data, thisSchool.publication);
+      $(".education-entry:last").append(formattedschoolPublication);
+
+    }
+
   }
 };
 

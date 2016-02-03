@@ -115,7 +115,11 @@ a {
 .onlineclassUrl {
   margin-top: 0;
 }
-
+.workPublication {
+  margin: 0;
+  width: 25%;
+  display: inline;
+}
 .project-img{
   margin-top: 10px;
   margin-right: 15px;
@@ -127,6 +131,15 @@ a.project-img {
 hr {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.resumePdf a:hover {
+  color: #40adcf;
+}
+
+.resumePdf.flex-box {
+  justify-content: flex-start;
+  padding-top: 0;
 }
 
 #topContacts {
